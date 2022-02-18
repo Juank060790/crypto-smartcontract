@@ -1,21 +1,15 @@
+// https://eth-ropsten.alchemyapi.io/v2/80DZhPfjCxBqZ7kN6S_J8X0DzWKqogri
+
 require("@nomiclabs/hardhat-waffle");
 
-// This is a sample Hardhat task. To learn how to create your own go to
-// https://hardhat.org/guides/create-task.html
-task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
-  const accounts = await hre.ethers.getSigners();
-
-  for (const account of accounts) {
-    console.log(account.address);
-  }
-});
-
-// You need to export an object to set up your config
-// Go to https://hardhat.org/config/ to learn more
-
-/**
- * @type import('hardhat/config').HardhatUserConfig
- */
 module.exports = {
-  solidity: "0.8.4",
+  solidity: "0.8.0",
+  networks: {
+    ropsten: {
+      url: "https://eth-ropsten.alchemyapi.io/v2/80DZhPfjCxBqZ7kN6S_J8X0DzWKqogri",
+      accounts: [
+        "4946e37c77be847fa5bdd944dec25749e54141e94d2c02a98854ca98883dc15b",
+      ],
+    },
+  },
 };
