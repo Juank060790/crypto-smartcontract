@@ -9,7 +9,6 @@ ReactDOM.render(
     <React.StrictMode>
       <App />
     </React.StrictMode>
-    ,
   </TransactionProvider>,
   document.getElementById("root")
 );
