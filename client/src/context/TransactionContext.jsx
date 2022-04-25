@@ -58,7 +58,7 @@ export const TransactionProvider = ({ children }) => {
           })
         );
 
-        console.log(structuredTransactions);
+        // console.log(structuredTransactions);
 
         setTransactions(structuredTransactions);
       } else {
